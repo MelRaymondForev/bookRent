@@ -1,12 +1,16 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <div class="container-fluid">
   <div style="color: blue;">
-    <h1>{{title}}</h1>
+    <h1 routerLink="home" class="btn btn-primary active" role="button" routerLinkActive="active">{{title}}</h1>
     <h3>{{description}}</h3>
   </div>
 
   <nav>
     <a routerLink="customers" class="btn btn-primary active" role="button" routerLinkActive="active">Customers</a>
-    <a routerLink="add" class="btn btn-primary active" role="button" routerLinkActive="active">Add</a>
+    <a routerLink="add" class="btn btn-primary active" role="button" routerLinkActive="active">Registration</a>
+    <a routerLink="addBooks" class="btn btn-primary active" role="button" routerLinkActive="active">Add Books</a>
+    <a routerLink="books" class="btn btn-primary active" role="button" routerLinkActive="active">Books</a>
+    <a routerLink="login" class="btn btn-primary active" role="button" routerLinkActive="active">Login</a>
   </nav>
   <router-outlet></router-outlet>
 </div>

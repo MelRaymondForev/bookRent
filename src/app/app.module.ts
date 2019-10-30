@@ -11,13 +11,25 @@ import { AppComponent } from './app.component';
 import { CustomerDetailsComponent } from './customers/customer-details/customer-details.component';
 import { CustomersListComponent } from './customers/customers-list/customers-list.component';
 import { CreateCustomerComponent } from './customers/create-customer/create-customer.component';
+import { BookDetailsComponent } from './books/book-details/book-details.component';
+import { BooksListComponent } from './books/books-list/books-list.component';
+import { CreateBookComponent } from './books/create-book/create-book.component';
+import { LoginComponent } from './auth/login/login.component';
+import { HomeComponent } from './home/home.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomerDetailsComponent,
     CustomersListComponent,
-    CreateCustomerComponent
+    CreateCustomerComponent,
+    BookDetailsComponent,
+    BooksListComponent,
+    CreateBookComponent,
+    LoginComponent,
+    HomeComponent
+    
   ],
   imports: [
     BrowserModule,
