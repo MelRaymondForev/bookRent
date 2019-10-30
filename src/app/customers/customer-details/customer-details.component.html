@@ -1,31 +1,38 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
 <div *ngIf="customer">
-  <div>
-    <label>Username: </label> {{customer.username}}
+
+  <div class="container">
+      <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="well well-sm">
+                  <div class="row">
+                      <div class="col-sm-6 col-md-4">
+                          <img src="assets/images/r2.jpg" alt="" class="img-rounded img-responsive"/>
+                      </div>
+                      <div class="col-sm-6 col-md-8">
+                          <h4>
+                              {{customer.firstname}} {{customer.lastname}}</h4>
+                          <p>
+                              <i class="glyphicon glyphicon-envelope"></i>{{customer.email}}
+                              <br />
+                              <i class="glyphicon glyphicon-gift"></i>{{customer.age}}</p>
+                          <!-- Split button -->
+                          <button> Check Rented Book </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
   </div>
-  <div>
-    <label>Password: </label> {{customer.password}}
-    </div>
-  <div>
-    <label>First Name: </label> {{customer.firstname}}
-  </div>
-  <div>
-    <label>last Name: </label> {{customer.lastname}}
-  </div>
-  <div>
-    <label>Email: </label> {{customer.email}}
-  </div>
-  <div>
-    <label>Age: </label> {{customer.age}}
-  </div>
-  <div>
-    <label>Active: </label> {{customer.active}}
-  </div>
- 
+
   <span class="button is-small btn-primary" *ngIf='customer.active' (click)='updateActive(false)'>Inactive</span>
  
   <span class="button is-small btn-primary" *ngIf='!customer.active' (click)='updateActive(true)'>Active</span>
  
   <span class="button is-small btn-danger" (click)='deleteCustomer()'>Delete</span>
  
-  <hr/>
 </div>
